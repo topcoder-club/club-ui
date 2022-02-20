@@ -1,7 +1,5 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import MyHeader from "@/components/MyHeader.vue";
-import MyFooter from "@/components/MyFooter.vue";
 
 const counter = ref(0);
 
