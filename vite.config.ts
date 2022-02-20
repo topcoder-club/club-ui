@@ -2,7 +2,8 @@ import * as path from 'path'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import pkg from './package.json'
-import Pages from "vite-plugin-pages";
+import pages from "vite-plugin-pages"
+import layouts from 'vite-plugin-vue-layouts'
 
 process.env.VITE_APP_VERSION = pkg.version
 if (process.env.NODE_ENV === 'production') {
@@ -16,7 +17,8 @@ export default defineConfig({
         refSugar: true,
       },
     }),
-    Pages(),
+    pages(),
+    layouts(),
   ],
   resolve: {
     alias: {
