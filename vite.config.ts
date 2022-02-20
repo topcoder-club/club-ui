@@ -1,13 +1,14 @@
-import * as path from 'path'
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
-import pkg from './package.json'
-import pages from "vite-plugin-pages"
-import layouts from 'vite-plugin-vue-layouts'
+import * as path from "path";
+import { defineConfig } from "vite";
+import vue from "@vitejs/plugin-vue";
+import pkg from "./package.json";
+import pages from "vite-plugin-pages";
+import layouts from "vite-plugin-vue-layouts";
+import components from "unplugin-vue-components/vite";
 
-process.env.VITE_APP_VERSION = pkg.version
-if (process.env.NODE_ENV === 'production') {
-  process.env.VITE_APP_BUILD_EPOCH = new Date().getTime().toString()
+process.env.VITE_APP_VERSION = pkg.version;
+if (process.env.NODE_ENV === "production") {
+  process.env.VITE_APP_BUILD_EPOCH = new Date().getTime().toString();
 }
 
 export default defineConfig({
@@ -19,10 +20,19 @@ export default defineConfig({
     }),
     pages(),
     layouts(),
+
+    // https://github.com/antfu/unplugin-vue-components
+    components({
+      // allow auto load markdown components under `./src/components/`
+      extensions: ["vue", "md"],
+      // allow auto import and register components used in markdown
+      include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
+      dts: "src/components.d.ts",
+    }),
   ],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src'),
+      "@": path.resolve(__dirname, "./src"),
     },
   },
-})
+});
