@@ -1,14 +1,10 @@
 <script setup lang="ts">
-import { useUserStore } from '~/stores/user'
+import { useRouter } from 'vue-router'
+import { useI18n } from 'vue-i18n'
 
 const props = defineProps<{ name: string }>()
 const router = useRouter()
-const user = useUserStore()
 const { t } = useI18n()
-
-watchEffect(() => {
-  user.setNewName(props.name)
-})
 </script>
 
 <template>
@@ -23,19 +19,6 @@ watchEffect(() => {
     <p text-sm opacity-50>
       <em>{{ t('intro.dynamic-route') }}</em>
     </p>
-
-    <template v-if="user.otherNames.length">
-      <p text-sm mt-4>
-        <span opacity-75>{{ t('intro.aka') }}:</span>
-        <ul>
-          <li v-for="otherName in user.otherNames" :key="otherName">
-            <router-link :to="`/hi/${otherName}`" replace>
-              {{ otherName }}
-            </router-link>
-          </li>
-        </ul>
-      </p>
-    </template>
 
     <div>
       <button
