@@ -14,7 +14,12 @@ Please [check out the homepage](https://vite-ts-tailwind-starter.vercel.app/) fo
 
 - Vue 3.2
 - **Fully typed** [Vuex 4](https://vuex.vuejs.org/) store
-- Routing using [vue-router 4](https://router.vuejs.org/)
+- [Vue Router](https://github.com/vuejs/vue-router)
+  - [`vite-plugin-pages`](https://github.com/hannoeru/vite-plugin-pages) - file system based routing
+  - [`vite-plugin-vue-layouts`](https://github.com/JohnCampionJr/vite-plugin-vue-layouts) - layouts for pages
+- [Vue I18n](https://github.com/intlify/vue-i18n-next) - Internationalization
+  - [`vite-plugin-vue-i18n`](https://github.com/intlify/vite-plugin-vue-i18n) - Vite plugin for Vue I18n
+- [`unplugin-vue-components`](https://github.com/antfu/unplugin-vue-components) - components auto import
 - TypeScript 4.5
 - Tailwind CSS 3.0 w/ following plugins preinstalled:
   - `@tailwindcss/aspect-ratio`
