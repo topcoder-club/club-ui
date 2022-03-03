@@ -4,7 +4,7 @@ describe('Homepage', () => {
   it('Shows correct text', () => {
     cy.visit('/')
 
-    cy.contains('h2', 'Hello World Component')
+    cy.contains('h2', 'Index Page')
   })
 
   it('Should not have vertical scroll bars on mobile or desktop', () => {
