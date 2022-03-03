@@ -6,7 +6,7 @@
       <h2
         class="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 sm:text-4xl sm:leading-10"
       >
-        About Page
+        Index Page
         <br />
         <span class="text-indigo-600">Vite + Vue 3 + Tailwind CSS</span>
       </h2>
@@ -23,8 +23,3 @@
     </div>
   </div>
 </template>
-
-<route lang="yaml">
-meta:
-  layout: home
-</route>
