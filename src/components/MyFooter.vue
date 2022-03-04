@@ -15,8 +15,8 @@
         />
       </svg>
       <p>
-        ACME Industries Ltd.
-        <br />Providing reliable tech since 1992
+        My Company Ltd.
+        <br />Providing reliable tech since 2021
       </p>
     </div>
     <div>

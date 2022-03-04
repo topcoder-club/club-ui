@@ -1,32 +1,27 @@
 <script setup lang="ts">
-import { useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 
 const props = defineProps<{ name: string }>()
-const router = useRouter()
 const { t } = useI18n()
 </script>
 
 <template>
-  <div>
-    <div text-4xl>
-      <div i-carbon-pedestrian inline-block />
-    </div>
-    <p>
-      {{ t('intro.hi', { name: props.name }) }}
-    </p>
-
-    <p text-sm opacity-50>
-      <em>{{ t('intro.dynamic-route') }}</em>
-    </p>
-
-    <div>
-      <button
-        btn m="3 t6" text-sm
-        @click="router.back()"
-      >
-        {{ t('button.back') }}
-      </button>
+    <div class="bg-gray-50">
+    <div
+      class="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:flex lg:items-center lg:justify-between lg:py-16 lg:px-8"
+    >
+      <h2
+        class="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 sm:text-4xl sm:leading-10"
+      >{{ t('intro.hi', { name: props.name }) }} ~ i18n and {{ t('intro.dynamic-route') }}</h2>
+      <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
+        <div class="inline-flex rounded-md shadow">
+          <router-link
+            to="/"
+            class="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-5 py-3 text-base font-medium leading-6 text-white transition duration-150 ease-in-out hover:bg-indigo-500 focus:outline-none"
+          >Back Home</router-link>
+        </div>
+        <ButtonRepo />
+      </div>
     </div>
   </div>
 </template>
