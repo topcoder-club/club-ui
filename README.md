@@ -27,6 +27,7 @@ Please [check out the homepage](https://vite-ts-tailwind-starter.vercel.app/) fo
   - `@tailwindcss/typography`
   - `@tailwindcss/forms`
   - `firefox`-variant
+  - `daisyui`
 - PostCSS 8 w/ `postcss-nesting` plugin
 - Eslint
 - Prettier

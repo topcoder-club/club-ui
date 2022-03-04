@@ -1,5 +1,7 @@
 <template>
-  <MyHeader></MyHeader>
+  <MyHeader>
+    <GithubRibbon></GithubRibbon>
+  </MyHeader>
   <main>
     <router-view />
   </main>

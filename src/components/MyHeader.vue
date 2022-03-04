@@ -1,6 +1,6 @@
 <template>
-  <div class="navbar bg-base-100">
-    <div class="flex-1">
+  <header class="navbar bg-base-100">
+    <div class="flex-none">
       <a class="btn btn-ghost text-xl normal-case">TOP开发者社区</a>
     </div>
     <div class="flex-none">
@@ -14,5 +14,8 @@
         <li><router-link to="/about">关于</router-link></li>
       </ul>
     </div>
-  </div>
+    <div class="flex-1">
+      <slot></slot>
+    </div>
+  </header>
 </template>
