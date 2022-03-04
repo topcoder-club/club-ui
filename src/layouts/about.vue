@@ -5,5 +5,7 @@
   <main>
     <router-view />
   </main>
-  <MyFooter></MyFooter>
+  <MyFooter>
+    <CopyRight></CopyRight>
+  </MyFooter>
 </template>

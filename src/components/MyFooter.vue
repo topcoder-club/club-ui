@@ -39,24 +39,6 @@
       <a class="link-hover link">Privacy policy</a>
       <a class="link-hover link">Cookie policy</a>
     </div>
-    <div>
-      <p>
-        Vite-ts-tailwind-starter by
-        <a class="underline" href="https://twitter.com/uninen">@Uninen</a>
-        &copy; 2020-{{ thisYear }}.
-        <template
-          v-if="BUILD_DATE"
-        >Site built {{ BUILD_DATE.toLocaleDateString() }}.</template>
-        <template v-else>Development mode.</template>
-      </p>
-    </div>
   </footer>
+  <slot></slot>
 </template>
-
-<script setup lang="ts">
-const VERSION = import.meta.env.VITE_APP_VERSION
-const BUILD_DATE = import.meta.env.VITE_APP_BUILD_EPOCH
-  ? new Date(Number(import.meta.env.VITE_APP_BUILD_EPOCH))
-  : undefined
-const thisYear = new Date().getFullYear()
-</script>

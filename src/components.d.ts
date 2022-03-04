@@ -4,8 +4,8 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
-    BaseTemplate: typeof import('./layouts/BaseTemplate.vue')['default']
     ButtonRepo: typeof import('./components/ButtonRepo.vue')['default']
+    CopyRight: typeof import('./components/CopyRight.vue')['default']
     GithubRibbon: typeof import('./components/GithubRibbon.vue')['default']
     HelloWorld: typeof import('./components/HelloWorld.vue')['default']
     MyFooter: typeof import('./components/MyFooter.vue')['default']
