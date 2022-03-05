@@ -12,7 +12,7 @@ const { t } = useI18n()
     >
       <h2
         class="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 sm:text-4xl sm:leading-10"
-      >{{ t('intro.hi', { name: props.name }) }} ~ i18n and {{ t('intro.dynamic-route') }}</h2>
+      >{{ t('intro.hi', { name: props.name }) }}(name) ~ i18n and {{ t('intro.dynamic-route') }}</h2>
       <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
         <div class="inline-flex rounded-md shadow">
           <router-link

@@ -12,7 +12,7 @@
           <router-link to="/not-found">NotFound</router-link>
         </li>
         <li>
-          <router-link :to="`/hi/${counter}`" replace>DynamicRoute:{{ counter }}</router-link>
+          <router-link :to="`/hi/${counter.count}`" replace>DynamicRoute:{{ counter.count }}</router-link>
         </li>
         <li>
           <router-link to="/about">About</router-link>
@@ -26,7 +26,13 @@
 </template>
 
 <script setup lang="ts">
-import { useInterval } from '@vueuse/core'
+import { useCounterStore } from '@/stores/counter'
+import { useIntervalFn } from '@vueuse/core'
 
-const counter = useInterval(1000)
+const counter = useCounterStore()
+
+useIntervalFn(() => {
+  counter.increment()
+}, 1000)
+
 </script>
