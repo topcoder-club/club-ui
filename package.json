@@ -12,6 +12,7 @@
     "test:ci-components": "cypress run-ct"
   },
   "dependencies": {
+    "@vueuse/core": "^7.7.0",
     "@vueuse/head": "~0.7",
     "daisyui": "^2.0.9",
     "vue": "~3.2",

@@ -8,7 +8,6 @@ declare module 'vue' {
     CopyRight: typeof import('./components/CopyRight.vue')['default']
     GithubRibbon: typeof import('./components/GithubRibbon.vue')['default']
     HelloWorld: typeof import('./components/HelloWorld.vue')['default']
-    MyCounter: typeof import('./components/MyCounter.vue')['default']
     MyFooter: typeof import('./components/MyFooter.vue')['default']
     MyHeader: typeof import('./components/MyHeader.vue')['default']
     README: typeof import('./components/README.md')['default']
