@@ -1,18 +1,11 @@
-<script setup lang="ts">
-import { useI18n } from 'vue-i18n'
-
-const props = defineProps<{ name: string }>()
-const { t } = useI18n()
-</script>
-
 <template>
-    <div class="bg-gray-50">
+  <div class="bg-gray-50">
     <div
       class="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:flex lg:items-center lg:justify-between lg:py-16 lg:px-8"
     >
       <h2
         class="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 sm:text-4xl sm:leading-10"
-      >{{ t('intro.hi', { name: props.name }) }}(name) ~ i18n and {{ t('intro.dynamic-route') }}</h2>
+      >{{ t('intro.hi', { name: props.name }) }}(from url) ~ i18n and {{ t('intro.dynamic-route') }}</h2>
       <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
         <div class="inline-flex rounded-md shadow">
           <router-link
@@ -25,3 +18,10 @@ const { t } = useI18n()
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+import { useI18n } from 'vue-i18n'
+
+const props = defineProps<{ name: string }>()
+const { t } = useI18n()
+</script>

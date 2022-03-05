@@ -27,12 +27,6 @@
 
 <script setup lang="ts">
 import { useCounterStore } from '@/stores/counter'
-import { useIntervalFn } from '@vueuse/core'
 
 const counter = useCounterStore()
-
-useIntervalFn(() => {
-  counter.increment()
-}, 1000)
-
 </script>
